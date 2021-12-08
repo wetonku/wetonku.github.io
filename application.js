@@ -53,3 +53,4 @@ document.querySelector('#notification-cancel').onclick = async () => {
   notifications.forEach(notification => notification.close());
   alert(`${notifications.length} notification(s) cancelled`);
 };
+navigator.serviceWorker.addEventListener('message', event => console.log(event.data));
