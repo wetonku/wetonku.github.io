@@ -31,19 +31,10 @@
 <link href="/CSS/main.css" rel="stylesheet" type="text/css" media="all" crossorigin/>
 
 <script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/generate-sw.js', {scope: '.'}).then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
 </script>
-
 </head>
 
 <body>
